@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-secondary/50">
+    <section id="contact" className="py-24 bg-secondary/5">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,7 +14,7 @@ const Contact = () => {
           <span className="text-sm uppercase tracking-wider text-muted-foreground mb-4 inline-block">
             Contact
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50 animate-gradient">
             Let's work together
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
@@ -29,7 +29,7 @@ const Contact = () => {
           >
             <a
               href="mailto:hello@example.com"
-              className="inline-flex items-center justify-center h-11 px-8 font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-primary hover:bg-primary/90"
+              className="inline-flex items-center justify-center h-11 px-8 font-medium tracking-wide text-primary-foreground transition-colors duration-200 rounded-md bg-primary hover:bg-primary/90"
             >
               Get in Touch
             </a>

@@ -35,7 +35,7 @@ const Work = () => {
           <span className="text-sm uppercase tracking-wider text-muted-foreground mb-4 inline-block">
             Portfolio
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold">
+          <h2 className="text-3xl md:text-4xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50 animate-gradient">
             Selected Work
           </h2>
         </motion.div>
@@ -48,7 +48,7 @@ const Work = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-lg bg-secondary/50 backdrop-blur-sm"
+              className="group relative overflow-hidden rounded-lg bg-secondary/10 border border-primary/5 hover:border-primary/10 transition-colors"
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -58,7 +58,7 @@ const Work = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-medium mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-medium mb-2 text-primary group-hover:text-primary/80 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-sm text-muted-foreground">
