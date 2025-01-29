@@ -22,28 +22,6 @@ const About = () => {
             I craft digital solutions that not only look beautiful but also solve
             real problems.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {[
-              "User Experience",
-              "Visual Design",
-              "Development",
-            ].map((skill, index) => (
-              <motion.div
-                key={skill}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="p-6 rounded-lg bg-secondary/10 backdrop-blur-sm border border-primary/5 hover:border-primary/10 transition-colors"
-              >
-                <h3 className="font-medium mb-2 text-primary">{skill}</h3>
-                <p className="text-sm text-muted-foreground">
-                  Creating intuitive and engaging experiences through thoughtful
-                  design and development.
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
       </div>
     </section>

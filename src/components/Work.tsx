@@ -1,26 +1,5 @@
 import { motion } from "framer-motion";
 
-const projects = [
-  {
-    title: "Project One",
-    description: "A beautiful and functional web application",
-    image: "/placeholder.svg",
-    link: "#",
-  },
-  {
-    title: "Project Two",
-    description: "An innovative mobile application",
-    image: "/placeholder.svg",
-    link: "#",
-  },
-  {
-    title: "Project Three",
-    description: "A responsive website design",
-    image: "/placeholder.svg",
-    link: "#",
-  },
-];
-
 const Work = () => {
   return (
     <section id="work" className="py-24">
@@ -39,35 +18,6 @@ const Work = () => {
             Selected Work
           </h2>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.a
-              key={project.title}
-              href={project.link}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-lg bg-secondary/10 border border-primary/5 hover:border-primary/10 transition-colors"
-            >
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-medium mb-2 text-primary group-hover:text-primary/80 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {project.description}
-                </p>
-              </div>
-            </motion.a>
-          ))}
-        </div>
       </div>
     </section>
   );
