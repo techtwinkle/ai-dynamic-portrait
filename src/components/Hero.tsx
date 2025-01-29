@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [text, setText] = useState("");
@@ -45,18 +46,24 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="space-x-4"
           >
-            <a
-              href="#work"
+            <Link
+              to="/about"
               className="inline-flex items-center justify-center h-11 px-8 font-medium tracking-wide transition-colors duration-200 rounded-md bg-primary text-primary-foreground hover:bg-primary/90"
             >
-              View Work
-            </a>
-            <a
-              href="#contact"
+              About Me
+            </Link>
+            <Link
+              to="/portfolio"
               className="inline-flex items-center justify-center h-11 px-8 font-medium tracking-wide transition-colors duration-200 rounded-md border border-primary/20 hover:bg-primary/10"
             >
-              Contact Me
-            </a>
+              View Work
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center h-11 px-8 font-medium tracking-wide transition-colors duration-200 rounded-md border border-primary/20 hover:bg-primary/10"
+            >
+              Contact
+            </Link>
           </motion.div>
         </motion.div>
       </div>
